@@ -1,0 +1,100 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="a">
+<h1>THE MOVIE RECOMMENDER</h1>
+<p>Please Select your 3 favourite movies from the dropdown menu and rate them </p>
+
+  <!-- <form action="/recommendation" method="get">
+
+    <label for="">Select movie no.1 </label>
+    <select name="movie1" onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+      <option>Dropdown, please select</option>
+      {% for movie in choices %}
+      <option value= "{{movie}}">{{movie}}</option>
+      {% endfor %}
+    </select>
+    <input type="text" name="rating1" placeholder="1 - 5">
+    <br>
+    <label for="">Select movie no.2 </label>
+    <select name="movie2" onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+      <option>Dropdown, please select</option>
+      {% for movie in choices %}
+      <option value= "{{movie}}">{{movie}}</option>
+      {% endfor %}
+    </select>
+    <input type="text" name="rating2" placeholder="1 - 5">
+    <br>
+    <label for="">Select movie no.3 </label>
+    <select name="movie3" onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+      <option>Dropdown, please select</option>
+      {% for movie in choices %}
+      <option value= "{{movie}}">{{movie}}</option>
+      {% endfor %}
+    </select>
+    <input type="text" name="rating3" placeholder="1 - 5">
+
+    <br>
+    <br>
+    <input type="submit">
+    </form> -->
+
+    <br>
+    <br>
+<form action="/recommendation" method="get">
+    <input type='text'
+           placeholder='Select movie no.1'
+           class='flexdatalist'
+           data-min-length='1'
+           list='movies_long'
+           name='movie1'>
+    <datalist id="movies_long">
+        {% for movie in choices %}
+        <option value= "{{movie}}">{{movie}}</option>
+        {% endfor %}
+    </datalist>
+    <input type="text" name="rating1" placeholder="Rating 1 - 5">
+    <br>
+
+    <input type='text'
+           placeholder='Select movie no.2'
+           class='flexdatalist'
+           data-min-length='1'
+           list='movies_long'
+           name='movie2'>
+    <datalist id="movies_long">
+        {% for movie in choices %}
+        <option value= "{{movie}}">{{movie}}</option>
+        {% endfor %}
+    </datalist>
+    <input type="text" name="rating2" placeholder="Rating 1 - 5">
+    <br>
+
+    <input type='text'
+           placeholder='Select movie no.3'
+           class='flexdatalist'
+           data-min-length='1'
+           list='movies_long'
+           name='movie3'>
+    <datalist id="movies_long">
+        {% for movie in choices %}
+        <option value= "{{movie}}">{{movie}}</option>
+        {% endfor %}
+    </datalist>
+    <input type="text" name="rating3" placeholder="Rating 1 - 5">
+    <br>
+    <br>
+    <input type="submit">
+ </form>
+ <br>
+ <br>
+ <br>
+ <br>
+ <a href="/test">Click here to see some awesome pictures!</a>
+
+ </div>
+
+
+
+
+{% endblock %}

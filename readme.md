@@ -13,3 +13,8 @@ The project consists of the following stages:
 - Explore the data in jupyter notebook
 - create a simple html/css website to get user user_input
 - transform user input and calculate recommentation
+
+## Frontend:
+Input user data![input user data](plots/user_input.jpeg)
+
+Output movie recommendation![output](plots/output.jpeg)
